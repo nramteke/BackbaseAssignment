@@ -16,6 +16,9 @@
 		726CD4CD223C3C23004986FF /* CityFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4CC223C3C23004986FF /* CityFinderTests.swift */; };
 		726CD4DD223C3CF2004986FF /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4DC223C3CF2004986FF /* City.swift */; };
 		726CD4E0223C3EAF004986FF /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 726CD4DF223C3EAF004986FF /* cities.json */; };
+		726CD4E6223C4973004986FF /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4E5223C4973004986FF /* AppConstants.swift */; };
+		726CD4E8223C49AF004986FF /* JsonFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4E7223C49AF004986FF /* JsonFileManager.swift */; };
+		726CD4EB223C4C7E004986FF /* CityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4EA223C4C7E004986FF /* CityManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		726CD4CE223C3C23004986FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		726CD4DC223C3CF2004986FF /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		726CD4DF223C3EAF004986FF /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
+		726CD4E5223C4973004986FF /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		726CD4E7223C49AF004986FF /* JsonFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileManager.swift; sourceTree = "<group>"; };
+		726CD4EA223C4C7E004986FF /* CityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +89,12 @@
 		726CD4B4223C3C21004986FF /* CityFinder */ = {
 			isa = PBXGroup;
 			children = (
-				726CD4DE223C3E74004986FF /* Supporting FIles */,
+				726CD4E4223C4940004986FF /* CommonUtility */,
+				726CD4E2223C48D9004986FF /* Managers */,
 				726CD4D9223C3C68004986FF /* ModelViews */,
 				726CD4DA223C3C82004986FF /* Views */,
 				726CD4D7223C3C3D004986FF /* Model */,
+				726CD4DE223C3E74004986FF /* Supporting FIles */,
 				726CD4B5223C3C21004986FF /* AppDelegate.swift */,
 				726CD4BB223C3C21004986FF /* Main.storyboard */,
 			);
@@ -159,6 +167,39 @@
 				726CD4B9223C3C21004986FF /* DetailViewController.swift */,
 			);
 			path = MapView;
+			sourceTree = "<group>";
+		};
+		726CD4E2223C48D9004986FF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				726CD4E9223C4C5E004986FF /* CityManager */,
+				726CD4E3223C490F004986FF /* FIleManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		726CD4E3223C490F004986FF /* FIleManager */ = {
+			isa = PBXGroup;
+			children = (
+				726CD4E7223C49AF004986FF /* JsonFileManager.swift */,
+			);
+			path = FIleManager;
+			sourceTree = "<group>";
+		};
+		726CD4E4223C4940004986FF /* CommonUtility */ = {
+			isa = PBXGroup;
+			children = (
+				726CD4E5223C4973004986FF /* AppConstants.swift */,
+			);
+			path = CommonUtility;
+			sourceTree = "<group>";
+		};
+		726CD4E9223C4C5E004986FF /* CityManager */ = {
+			isa = PBXGroup;
+			children = (
+				726CD4EA223C4C7E004986FF /* CityManager.swift */,
+			);
+			path = CityManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,9 +305,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				726CD4BA223C3C21004986FF /* DetailViewController.swift in Sources */,
+				726CD4EB223C4C7E004986FF /* CityManager.swift in Sources */,
 				726CD4B8223C3C21004986FF /* MasterViewController.swift in Sources */,
 				726CD4DD223C3CF2004986FF /* City.swift in Sources */,
+				726CD4E8223C49AF004986FF /* JsonFileManager.swift in Sources */,
 				726CD4B6223C3C21004986FF /* AppDelegate.swift in Sources */,
+				726CD4E6223C4973004986FF /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
