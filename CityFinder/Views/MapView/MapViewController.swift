@@ -26,16 +26,16 @@ class MapViewController: UIViewController {
     
     func configureView() {
         // Update the user interface for the city on map.
-        
         self.title = cityName
         if let centerCoordinates = centerCoordinates {
-            // With the region centered in the location (lat and lon) and delta spam of 0.1 to improve zoom closer over the city
             let region = MKCoordinateRegion(center: centerCoordinates, span: MKCoordinateSpan(latitudeDelta: spamDelta, longitudeDelta: spamDelta))
             mapView.setRegion(region, animated: false)
             addAnnotation()
         }
     }
     
+    
+    /// Add annotation to Map View
     func addAnnotation()
     {
         let annotation = MKPointAnnotation()
@@ -54,9 +54,9 @@ class MapViewController: UIViewController {
     
     
     
+    /// Update the mapview with city location
     fileprivate func updateMapView() {
         if let centerCoordinates = centerCoordinates {
-            // With the region centered in the location (lat and lon) and delta spam of 0.1 to improve zoom closer over the city
             let region = MKCoordinateRegion(center: centerCoordinates, span: MKCoordinateSpan(latitudeDelta: spamDelta, longitudeDelta: spamDelta))
             mapView.setRegion(region, animated: false)
         }

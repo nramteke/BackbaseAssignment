@@ -16,7 +16,7 @@ class CitySearchViewController: UITableViewController,UISearchResultsUpdating {
     private var filteredCities: [City]?
     private var citySearchManager: CityManager?
 
-
+    // MARK: - View Update
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,6 +32,10 @@ class CitySearchViewController: UITableViewController,UISearchResultsUpdating {
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
+        super.viewWillAppear(animated)
+    }
     
     /// Add Search Controller to navigation bar
     fileprivate func addSearchToNavigationBar() {
@@ -43,10 +47,7 @@ class CitySearchViewController: UITableViewController,UISearchResultsUpdating {
         navigationItem.searchController = search
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
-        super.viewWillAppear(animated)
-    }
+    
 
     // MARK: - Segues
 
