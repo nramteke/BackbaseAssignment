@@ -21,7 +21,7 @@ class CityFinderTests: XCTestCase {
  */
     
     
-    let cities = CityManager(with :[City.init(id: 1234, country: "US", name: "Alabama", coord:  Coord.init(coord:(CLLocationCoordinate2D(latitude: 44.549999, longitude: 34.283333)))),
+    let citiesManager = CityManager(with :[City.init(id: 1234, country: "US", name: "Alabama", coord:  Coord.init(coord:(CLLocationCoordinate2D(latitude: 44.549999, longitude: 34.283333)))),
                                     City.init(id: 1234, country: "US", name: "Albuquerque", coord:  Coord.init(coord:(CLLocationCoordinate2D(latitude: 44.549999, longitude: 34.283333)))),
                                     City.init(id: 1234, country: "US", name: "Anaheim", coord:  Coord.init(coord:(CLLocationCoordinate2D(latitude: 44.549999, longitude: 34.283333)))),
                                     City.init(id: 1234, country: "US", name: "Arizona", coord:  Coord.init(coord:(CLLocationCoordinate2D(latitude: 44.549999, longitude: 34.283333)))),
@@ -45,18 +45,18 @@ class CityFinderTests: XCTestCase {
     }
 
     func testEmptyFilter() {
-        let result = cities.getCities(for: "")
+        let result = citiesManager.getCities(for: "")
         XCTAssertTrue(result.count == 5)
     }
     
     
     func testSFilter() {
-        let result = cities.getCities(for: "S")
+        let result = citiesManager.getCities(for: "S")
         XCTAssertTrue(result.count == 1)
     }
     
     func testALFilter() {
-        let result = cities.getCities(for: "AL")
+        let result = citiesManager.getCities(for: "AL")
         XCTAssertTrue(result.count == 2)
     }
     

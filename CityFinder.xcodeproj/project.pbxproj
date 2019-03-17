@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		726CD4B6223C3C21004986FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4B5223C3C21004986FF /* AppDelegate.swift */; };
-		726CD4B8223C3C21004986FF /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4B7223C3C21004986FF /* MasterViewController.swift */; };
-		726CD4BA223C3C21004986FF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4B9223C3C21004986FF /* DetailViewController.swift */; };
+		726CD4B8223C3C21004986FF /* CitySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4B7223C3C21004986FF /* CitySearchViewController.swift */; };
+		726CD4BA223C3C21004986FF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4B9223C3C21004986FF /* MapViewController.swift */; };
 		726CD4BD223C3C21004986FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 726CD4BB223C3C21004986FF /* Main.storyboard */; };
 		726CD4BF223C3C23004986FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726CD4BE223C3C23004986FF /* Assets.xcassets */; };
 		726CD4C2223C3C23004986FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 726CD4C0223C3C23004986FF /* LaunchScreen.storyboard */; };
@@ -19,6 +19,14 @@
 		726CD4E6223C4973004986FF /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4E5223C4973004986FF /* AppConstants.swift */; };
 		726CD4E8223C49AF004986FF /* JsonFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4E7223C49AF004986FF /* JsonFileManager.swift */; };
 		726CD4EB223C4C7E004986FF /* CityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4EA223C4C7E004986FF /* CityManager.swift */; };
+		726CD4EE223D6E37004986FF /* CityInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4ED223D6E37004986FF /* CityInfoTableViewCell.swift */; };
+		726CD4F0223D75F3004986FF /* CityInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4EF223D75F3004986FF /* CityInfoViewModel.swift */; };
+		726CD4F3223D89FA004986FF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4F2223D89FA004986FF /* AboutViewController.swift */; };
+		726CD4FA223D8EE6004986FF /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4F6223D8EE6004986FF /* AboutView.swift */; };
+		726CD4FB223D8EE6004986FF /* AboutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4F7223D8EE6004986FF /* AboutModel.swift */; };
+		726CD4FC223D8EE6004986FF /* AboutInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4F8223D8EE6004986FF /* AboutInfo.swift */; };
+		726CD4FD223D8EE6004986FF /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CD4F9223D8EE6004986FF /* AboutPresenter.swift */; };
+		726CD4FF223D9535004986FF /* aboutInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 726CD4FE223D92CF004986FF /* aboutInfo.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +42,8 @@
 /* Begin PBXFileReference section */
 		726CD4B2223C3C21004986FF /* CityFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		726CD4B5223C3C21004986FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		726CD4B7223C3C21004986FF /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		726CD4B9223C3C21004986FF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		726CD4B7223C3C21004986FF /* CitySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchViewController.swift; sourceTree = "<group>"; };
+		726CD4B9223C3C21004986FF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		726CD4BC223C3C21004986FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		726CD4BE223C3C23004986FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		726CD4C1223C3C23004986FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +56,14 @@
 		726CD4E5223C4973004986FF /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		726CD4E7223C49AF004986FF /* JsonFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileManager.swift; sourceTree = "<group>"; };
 		726CD4EA223C4C7E004986FF /* CityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityManager.swift; sourceTree = "<group>"; };
+		726CD4ED223D6E37004986FF /* CityInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoTableViewCell.swift; sourceTree = "<group>"; };
+		726CD4EF223D75F3004986FF /* CityInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoViewModel.swift; sourceTree = "<group>"; };
+		726CD4F2223D89FA004986FF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		726CD4F6223D8EE6004986FF /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		726CD4F7223D8EE6004986FF /* AboutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutModel.swift; sourceTree = "<group>"; };
+		726CD4F8223D8EE6004986FF /* AboutInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutInfo.swift; sourceTree = "<group>"; };
+		726CD4F9223D8EE6004986FF /* AboutPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
+		726CD4FE223D92CF004986FF /* aboutInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = aboutInfo.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +105,10 @@
 		726CD4B4223C3C21004986FF /* CityFinder */ = {
 			isa = PBXGroup;
 			children = (
+				726CD4F5223D8ED2004986FF /* AdditinalFiles */,
 				726CD4E4223C4940004986FF /* CommonUtility */,
 				726CD4E2223C48D9004986FF /* Managers */,
-				726CD4D9223C3C68004986FF /* ModelViews */,
+				726CD4D9223C3C68004986FF /* VIewModel */,
 				726CD4DA223C3C82004986FF /* Views */,
 				726CD4D7223C3C3D004986FF /* Model */,
 				726CD4DE223C3E74004986FF /* Supporting FIles */,
@@ -126,16 +143,18 @@
 			path = LaunchView;
 			sourceTree = "<group>";
 		};
-		726CD4D9223C3C68004986FF /* ModelViews */ = {
+		726CD4D9223C3C68004986FF /* VIewModel */ = {
 			isa = PBXGroup;
 			children = (
+				726CD4EF223D75F3004986FF /* CityInfoViewModel.swift */,
 			);
-			path = ModelViews;
+			path = VIewModel;
 			sourceTree = "<group>";
 		};
 		726CD4DA223C3C82004986FF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				726CD4F1223D89D3004986FF /* CityInfoView */,
 				726CD4E1223C47DD004986FF /* MapView */,
 				726CD4DB223C3CAB004986FF /* SearchView */,
 				726CD4D8223C3C59004986FF /* LaunchView */,
@@ -146,7 +165,8 @@
 		726CD4DB223C3CAB004986FF /* SearchView */ = {
 			isa = PBXGroup;
 			children = (
-				726CD4B7223C3C21004986FF /* MasterViewController.swift */,
+				726CD4B7223C3C21004986FF /* CitySearchViewController.swift */,
+				726CD4ED223D6E37004986FF /* CityInfoTableViewCell.swift */,
 			);
 			path = SearchView;
 			sourceTree = "<group>";
@@ -155,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				726CD4DF223C3EAF004986FF /* cities.json */,
+				726CD4FE223D92CF004986FF /* aboutInfo.json */,
 				726CD4BE223C3C23004986FF /* Assets.xcassets */,
 				726CD4C3223C3C23004986FF /* Info.plist */,
 			);
@@ -164,7 +185,7 @@
 		726CD4E1223C47DD004986FF /* MapView */ = {
 			isa = PBXGroup;
 			children = (
-				726CD4B9223C3C21004986FF /* DetailViewController.swift */,
+				726CD4B9223C3C21004986FF /* MapViewController.swift */,
 			);
 			path = MapView;
 			sourceTree = "<group>";
@@ -200,6 +221,25 @@
 				726CD4EA223C4C7E004986FF /* CityManager.swift */,
 			);
 			path = CityManager;
+			sourceTree = "<group>";
+		};
+		726CD4F1223D89D3004986FF /* CityInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				726CD4F2223D89FA004986FF /* AboutViewController.swift */,
+			);
+			path = CityInfoView;
+			sourceTree = "<group>";
+		};
+		726CD4F5223D8ED2004986FF /* AdditinalFiles */ = {
+			isa = PBXGroup;
+			children = (
+				726CD4F8223D8EE6004986FF /* AboutInfo.swift */,
+				726CD4F7223D8EE6004986FF /* AboutModel.swift */,
+				726CD4F9223D8EE6004986FF /* AboutPresenter.swift */,
+				726CD4F6223D8EE6004986FF /* AboutView.swift */,
+			);
+			path = AdditinalFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +326,7 @@
 				726CD4E0223C3EAF004986FF /* cities.json in Resources */,
 				726CD4C2223C3C23004986FF /* LaunchScreen.storyboard in Resources */,
 				726CD4BF223C3C23004986FF /* Assets.xcassets in Resources */,
+				726CD4FF223D9535004986FF /* aboutInfo.json in Resources */,
 				726CD4BD223C3C21004986FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,12 +345,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				726CD4BA223C3C21004986FF /* DetailViewController.swift in Sources */,
+				726CD4BA223C3C21004986FF /* MapViewController.swift in Sources */,
+				726CD4F3223D89FA004986FF /* AboutViewController.swift in Sources */,
+				726CD4FA223D8EE6004986FF /* AboutView.swift in Sources */,
 				726CD4EB223C4C7E004986FF /* CityManager.swift in Sources */,
-				726CD4B8223C3C21004986FF /* MasterViewController.swift in Sources */,
+				726CD4FD223D8EE6004986FF /* AboutPresenter.swift in Sources */,
+				726CD4B8223C3C21004986FF /* CitySearchViewController.swift in Sources */,
 				726CD4DD223C3CF2004986FF /* City.swift in Sources */,
 				726CD4E8223C49AF004986FF /* JsonFileManager.swift in Sources */,
+				726CD4FC223D8EE6004986FF /* AboutInfo.swift in Sources */,
+				726CD4FB223D8EE6004986FF /* AboutModel.swift in Sources */,
 				726CD4B6223C3C21004986FF /* AppDelegate.swift in Sources */,
+				726CD4EE223D6E37004986FF /* CityInfoTableViewCell.swift in Sources */,
+				726CD4F0223D75F3004986FF /* CityInfoViewModel.swift in Sources */,
 				726CD4E6223C4973004986FF /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

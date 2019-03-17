@@ -11,11 +11,26 @@ import Foundation
 class CityManager {
     var cities: [City]
     var filteredCities = [City]()
-    var currentFilter = ""
+    fileprivate var currentFilter = ""
 
     init(with cities: [City]) {
         self.cities = cities
     }
+    
+    
+    class func getAllCities() -> [City] {
+        return sortedCities()
+    }
+    
+    class func sortedCities() -> [City] {
+        guard var sortedCities = try? JSONDecoder().decode([City].self, from: JsonFileManager.readCitiesDataFromJson()) else {
+            print("Error: Couldn't decode data into Blog")
+            return [City]()
+        }
+        sortedCities.sort { $0.name < $1.name && $0.country < $1.country }
+        return sortedCities
+    }
+    
 
     func getCities(for filter: String) -> [City] {
         let lowercasedFilter = filter.lowercased()
