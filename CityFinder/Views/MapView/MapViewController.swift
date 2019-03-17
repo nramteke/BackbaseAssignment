@@ -26,6 +26,8 @@ class MapViewController: UIViewController {
     
     func configureView() {
         // Update the user interface for the city on map.
+        
+        self.title = cityName
         if let centerCoordinates = centerCoordinates {
             // With the region centered in the location (lat and lon) and delta spam of 0.1 to improve zoom closer over the city
             let region = MKCoordinateRegion(center: centerCoordinates, span: MKCoordinateSpan(latitudeDelta: spamDelta, longitudeDelta: spamDelta))
@@ -47,6 +49,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         configureView()
+
     }
     
     
